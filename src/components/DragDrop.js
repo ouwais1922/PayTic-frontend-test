@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 
 const DragDrop = () => {
@@ -114,7 +113,7 @@ const DragDrop = () => {
                         </thead>
                         <tbody>
                             {
-                                savedItems.map((item) => {
+                                savedItems.map((item) => (
                                     (
                                         <tr key={item.id} class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -125,7 +124,7 @@ const DragDrop = () => {
                                             </td>
                                         </tr>
                                     )
-                                })
+                                ))
                             }
                         </tbody>
                     </table>
